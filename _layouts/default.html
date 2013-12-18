@@ -6,11 +6,9 @@
         <title>{{ page.title }}</title>
         <meta name="viewport" content="width=device-width">
 
-        <!-- syntax highlighting CSS 
-        <link rel="stylesheet" href="/css/syntax.css">-->
-
-        <!-- Custom CSS 
-        <link rel="stylesheet" href="/css/main.css">-->
+        
+        <!-- <link rel="stylesheet" href="{{ site.baseurl }}/css/normalize.css">
+        <link rel="stylesheet" href="{{ site.baseurl }}/css/foundation.css"> -->
 
         <!-- SCSS, baby -->
         <link rel="stylesheet" href="{{ site.baseurl }}/css/screen.css">
@@ -18,30 +16,56 @@
     </head>
     <body>
 
-        <div class="site">
-          <div class="header">
-            <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-            <a class="extra" href="/">home</a>
-          </div>
-
-          {{ content }}
-
-          <div class="footer">
-            <div class="contact">
-              <p>
-                Your Name<br />
-                What You Are<br />
-                you@example.com
-              </p>
+        <header>
+          <div class="row">
+            <div class="small-12 columns" style="text-align:center;">
+              <h1 class="title"><a href="/">{{ site.name }}</a></h1>
+              <nav class="small-12 columns">
+                <ul class="inline-list">
+                  <li><a class="extra" href="/">Work</a></li>
+                  <li><a class="extra" href="/">Articles</a></li>
+                  <li><a class="extra" href="/">Notes</a></li>
+                  <li><a class="extra" href="/">Info</a></li>
+                </ul>
+              </nav>
             </div>
-            <div class="contact">
-              <p>
-                <a href="https://github.com/yourusername">github.com/yourusername</a><br />
-                <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
-              </p>
+
+            <div class="small-12 large-4 columns" style="color:#ffffff; background:#666666;">
+              <p>I was born in the year 18 – to a large fortune, endowed besides with excellent parts, inclined by nature to industry, fond of the respect of the wise and good among my fellowmen, and thus, as might have been supposed, with every guarantee of an honourable and distinguished future. And indeed the worst of my faults was a certain impatient gaiety of disposition, such as has made the happiness of many, but such as I found it hard to reconcile with my imperious desire to carry my head high, and wear a more than commonly grave countenance before the public. Hence it came about that I concealed my pleasures; and that when I reached years of reflection, and began to look round me and take stock of my progress and position in the world, I stood already committed to a profound duplicity of me.</p>
+            </div>
+
+            <div class="small-12 large-4 columns" style="color:#ffffff; background:#666666;">
+              <p>I was born in the year 18 – to a large fortune, endowed besides with excellent parts, inclined by nature to industry, fond of the respect of the wise and good among my fellowmen, and thus, as might have been supposed, with every guarantee of an honourable and distinguished future. And indeed the worst of my faults was a certain impatient gaiety of disposition, such as has made the happiness of many, but such as I found it hard to reconcile with my imperious desire to carry my head high, and wear a more than commonly grave countenance before the public. Hence it came about that I concealed my pleasures; and that when I reached years of reflection, and began to look round me and take stock of my progress and position in the world, I stood already committed to a profound duplicity of me.</p>
+            </div>
+
+            <div class="small-12 large-4 columns" style="color:#ffffff; background:#666666;">
+              <p>I was born in the year 18 – to a large fortune, endowed besides with excellent parts, inclined by nature to industry, fond of the respect of the wise and good among my fellowmen, and thus, as might have been supposed, with every guarantee of an honourable and distinguished future. And indeed the worst of my faults was a certain impatient gaiety of disposition, such as has made the happiness of many, but such as I found it hard to reconcile with my imperious desire to carry my head high, and wear a more than commonly grave countenance before the public. Hence it came about that I concealed my pleasures; and that when I reached years of reflection, and began to look round me and take stock of my progress and position in the world, I stood already committed to a profound duplicity of me.</p>
+            </div>
+
+
+          </div>
+        </header>
+
+
+        <section class="site">
+          <div class="row">
+            {{ content }}
+          </div>
+        </section>
+
+        <footer>
+          <div class="row">
+            <div class="small-12 columns" style="text-align:center;">
+            <h2>Elsewhere</h2>
+            <ul class="inline-list">
+              <li><a class="extra" href="/">home</a></li>
+              <li><a class="extra" href="/">home</a></li>
+              <li><a class="extra" href="/">home</a></li>
+              <li><a class="extra" href="/">home</a></li>
+            </ul>
             </div>
           </div>
-        </div>
+        </footer>
 
     </body>
 </html>

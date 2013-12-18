@@ -1,4 +1,14 @@
-name: Your New Jekyll Site
-markdown: redcarpet
-pygments: true
+site_name: 'Andrew Lohman'
+name: Andrew Lohman
+markdown: rdiscount
+rdiscount:
+    extensions: [smart]
+permalink: /articles/:title
+paginate: 3
 baseurl: /andrewlohman
+
+
+# name: Andrew Lohman
+# markdown: redcarpet
+# pygments: true
+# baseurl: /andrewlohman
