@@ -6,16 +6,43 @@
 // @import "compass/reset";
 
 @import "normalize";
-@import "foundation";
+// @import "foundation";
 
-body {background:pink; font-size:100%;}
+body {background:#ffffff;}
 
-header {
-	background:#333333;
+header.main-header {
+	background:#eee;
 	padding:4em 0;
 }
+.main-header>.wrapper {
+	max-width:800px;
+	margin:0 auto;
+	padding:0 1rem;
+	background:pink;
+}
 
-footer {
+.main-content>.wrapper {
+	max-width: 600px;
+	margin: 0 auto;
+	padding:0 1rem;
+}
+
+h1, h2 {
+	text-align:center;
+}
+
+ul.main-nav-list {
+	text-align:center;
+	margin:0;
+	padding:0;
+}
+
+.main-nav-list li {
+	display:inline;
+	padding:0 0.75rem;
+}
+
+footer.main-footer {
 	background:#333333;
 	padding:4em 0;
 }

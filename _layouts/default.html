@@ -16,7 +16,7 @@
     </head>
     <body>
 
-        <header>
+        <!-- <header>
           <div class="row">
             <div class="small-12 columns" style="text-align:center;">
               <h1 class="title"><a href="/">{{ site.name }}</a></h1>
@@ -29,41 +29,34 @@
                 </ul>
               </nav>
             </div>
+          </div>
+        </header> -->
 
-            <div class="small-12 large-4 columns" style="color:#ffffff; background:#666666;">
-              <p>I was born in the year 18 – to a large fortune, endowed besides with excellent parts, inclined by nature to industry, fond of the respect of the wise and good among my fellowmen, and thus, as might have been supposed, with every guarantee of an honourable and distinguished future. And indeed the worst of my faults was a certain impatient gaiety of disposition, such as has made the happiness of many, but such as I found it hard to reconcile with my imperious desire to carry my head high, and wear a more than commonly grave countenance before the public. Hence it came about that I concealed my pleasures; and that when I reached years of reflection, and began to look round me and take stock of my progress and position in the world, I stood already committed to a profound duplicity of me.</p>
-            </div>
-
-            <div class="small-12 large-4 columns" style="color:#ffffff; background:#666666;">
-              <p>I was born in the year 18 – to a large fortune, endowed besides with excellent parts, inclined by nature to industry, fond of the respect of the wise and good among my fellowmen, and thus, as might have been supposed, with every guarantee of an honourable and distinguished future. And indeed the worst of my faults was a certain impatient gaiety of disposition, such as has made the happiness of many, but such as I found it hard to reconcile with my imperious desire to carry my head high, and wear a more than commonly grave countenance before the public. Hence it came about that I concealed my pleasures; and that when I reached years of reflection, and began to look round me and take stock of my progress and position in the world, I stood already committed to a profound duplicity of me.</p>
-            </div>
-
-            <div class="small-12 large-4 columns" style="color:#ffffff; background:#666666;">
-              <p>I was born in the year 18 – to a large fortune, endowed besides with excellent parts, inclined by nature to industry, fond of the respect of the wise and good among my fellowmen, and thus, as might have been supposed, with every guarantee of an honourable and distinguished future. And indeed the worst of my faults was a certain impatient gaiety of disposition, such as has made the happiness of many, but such as I found it hard to reconcile with my imperious desire to carry my head high, and wear a more than commonly grave countenance before the public. Hence it came about that I concealed my pleasures; and that when I reached years of reflection, and began to look round me and take stock of my progress and position in the world, I stood already committed to a profound duplicity of me.</p>
-            </div>
-
-
+        <header class="main-header">
+          <div class="wrapper">
+            <h1 class="main-title"><a href="/">{{ site.name }}</a></h1>
+            <nav class="main-nav">
+              <ul class="main-nav-list">
+                <li><a href="/">Projects</a></li>
+                <li><a href="/">Articles</a></li>
+                <li><a href="/">Notes</a></li>
+                <li><a href="/">About</a></li>
+              </ul>
+            </nav>
           </div>
         </header>
 
+        {{ content }}
 
-        <section class="site">
-          <div class="row">
-            {{ content }}
-          </div>
-        </section>
-
-        <footer>
-          <div class="row">
-            <div class="small-12 columns" style="text-align:center;">
+        <footer class="main-footer">
+          <div class="wrapper">
             <h2>Elsewhere</h2>
-            <ul class="inline-list">
+            <ul class="">
               <li><a class="extra" href="/">home</a></li>
               <li><a class="extra" href="/">home</a></li>
               <li><a class="extra" href="/">home</a></li>
               <li><a class="extra" href="/">home</a></li>
             </ul>
-            </div>
           </div>
         </footer>
 
