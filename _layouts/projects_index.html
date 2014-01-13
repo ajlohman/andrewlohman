@@ -1,0 +1,34 @@
+---
+layout: default
+---
+
+<main class="main-content">
+	<div class="wrapper">
+		<article class="article">
+			<header class="content-header">
+				<h2 class="content-title">{{ page.title }}</h2>
+				<h3 class="content-subheader">{{ page.date | date_to_string }}</h3>
+			</header>
+			<div class="content-boby">
+			{{ content }}
+			</div>
+			<footer class="contente-footer">
+				<p>Twitter button</p>
+			</footer>
+		</article>
+		<section>
+			<h3>Featured articles</h3>
+			<ul class="vertical-list">
+				<li class="vertical-listing">Article name</li>
+				<li class="vertical-listing">Article name</li>
+				<li class="vertical-listing">Article name</li>
+			</ul>
+			<footer>
+				<p>Archive</p>
+			</footer>
+		</section>
+		<footer>
+			<p>Follow @ajlohman on Twitter</p>
+		</footer>
+	</div>
+</main>
