@@ -1,7 +1,9 @@
 ---
 layout: articles_index
 title: "Search for Mr. Hyde"
-date: September 1, 1880
+date: January 12, 2014
+tags: test
+description: some text goes here...
 ---
 
 <p>
