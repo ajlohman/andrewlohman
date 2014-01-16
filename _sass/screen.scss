@@ -8,17 +8,32 @@
 @import "normalize";
 // @import "foundation";
 
-body {background:#ffffff;}
+// site variables
+
+$primary-color: #333;
+
+// background colors
+$primary-bg-color: #eee;
+$secondary-bg-color: #333;
+$body-bg-color:#fff;
+
+// text and header colors
+$primary-header-color: #3a3a3c;
+$primary-text-color:#3a3a3c;
+
+body {
+	background:$body-bg-color;
+	color: $primary-text-color;
+}
 
 header.main-header {
-	background:#eee;
+	background:$primary-bg-color;
 	padding:4em 0;
 }
 .main-header>.wrapper {
 	max-width:800px;
 	margin:0 auto;
 	padding:0 1rem;
-	background:pink;
 }
 
 .main-content>.wrapper {
@@ -29,6 +44,7 @@ header.main-header {
 
 h1, h2 {
 	text-align:center;
+	color:$primary-header-color;
 }
 
 ul.main-nav-list {
@@ -43,10 +59,7 @@ ul.main-nav-list {
 }
 
 footer.main-footer {
-	background:#333333;
+	background:$primary-bg-color;
 	padding:4em 0;
 }
 
-footer h2 {
-	color:#ffffff;
-}

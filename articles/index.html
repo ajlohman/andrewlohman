@@ -11,11 +11,13 @@ category: articles
 			  <ul class="posts">
 				{% for post in paginator.posts %}
 					<li><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
-				 <!-- {{ post.date | time_ago }}
+				 {{ post.date | time_ago }}
 				 {{ post.tags | tag_links }}
-				 {{ post.description }} -->
+				 {{ post.description }}
 				{% endfor %}
 			  </ul>
+
+			  {{ paginator | pager_links }}
 		</div>
 	</div>
 </section>

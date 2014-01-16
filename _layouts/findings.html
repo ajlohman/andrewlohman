@@ -6,8 +6,8 @@ layout: default
 	<div class="wrapper">
 		<article class="article">
 			<header class="content-header">
-				<h2 class="content-title">{{ page.title }}</h2>
-				<h3 class="content-subheader">{{ page.date | date_to_string }}</h3>
+				<h2 class="content-title">{{ post.title }}</h2>
+				<h3 class="content-subheader">{{ post.date | time_ago }}</h3>
 			</header>
 			<div class="content-boby">
 			{{ content }}

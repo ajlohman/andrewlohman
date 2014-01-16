@@ -423,57 +423,53 @@ table {
   border-spacing: 0;
 }
 
-/* line 11, ../_sass/screen.scss */
+/* line 24, ../_sass/screen.scss */
 body {
-  background: #ffffff;
+  background: white;
+  color: #3a3a3c;
 }
 
-/* line 13, ../_sass/screen.scss */
+/* line 29, ../_sass/screen.scss */
 header.main-header {
-  background: #eee;
+  background: #eeeeee;
   padding: 4em 0;
 }
 
-/* line 17, ../_sass/screen.scss */
+/* line 33, ../_sass/screen.scss */
 .main-header > .wrapper {
   max-width: 800px;
   margin: 0 auto;
   padding: 0 1rem;
-  background: pink;
 }
 
-/* line 24, ../_sass/screen.scss */
+/* line 39, ../_sass/screen.scss */
 .main-content > .wrapper {
   max-width: 600px;
   margin: 0 auto;
   padding: 0 1rem;
 }
 
-/* line 30, ../_sass/screen.scss */
+/* line 45, ../_sass/screen.scss */
 h1, h2 {
   text-align: center;
+  color: #3a3a3c;
 }
 
-/* line 34, ../_sass/screen.scss */
+/* line 50, ../_sass/screen.scss */
 ul.main-nav-list {
   text-align: center;
   margin: 0;
   padding: 0;
 }
 
-/* line 40, ../_sass/screen.scss */
+/* line 56, ../_sass/screen.scss */
 .main-nav-list li {
   display: inline;
   padding: 0 0.75rem;
 }
 
-/* line 45, ../_sass/screen.scss */
+/* line 61, ../_sass/screen.scss */
 footer.main-footer {
-  background: #333333;
+  background: #eeeeee;
   padding: 4em 0;
-}
-
-/* line 50, ../_sass/screen.scss */
-footer h2 {
-  color: #ffffff;
 }

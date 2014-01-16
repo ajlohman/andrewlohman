@@ -1,7 +1,7 @@
 ---
 layout: default
-category: findings
 title: Findings
+category: findings
 ---
 
 <section class="site">
@@ -9,10 +9,15 @@ title: Findings
 		<div class="small-12 medium-8 medium-centered columns">
 			  <h1>Findings</h1>
 			  <ul class="posts">
-			    {% for post in site.findings %}
-			      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-			    {% endfor %}
+				{% for post in paginator.posts %}
+					<li><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+				 {{ post.date | time_ago }}
+				 {{ post.tags | tag_links }}
+				 {{ post.description }}
+				{% endfor %}
 			  </ul>
+
+			  {{ paginator | pager_links }}
 		</div>
 	</div>
 </section>

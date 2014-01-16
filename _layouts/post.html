@@ -17,11 +17,11 @@ layout: default
 			</footer>
 		</article>
 		<section>
-			<h3>Featured articles</h3>
+			<h3>Recent articles</h3>
 			<ul class="vertical-list">
-				<li class="vertical-listing">Article name</li>
-				<li class="vertical-listing">Article name</li>
-				<li class="vertical-listing">Article name</li>
+				{% for post in site.categories['articles'] limit:5 %}
+				<li class="vertical-listing"><a href="{{post.url}}">{{post.title}}</a></li>
+				{% endfor %}
 			</ul>
 			<footer>
 				<p>Archive</p>
@@ -30,5 +30,25 @@ layout: default
 		<footer>
 			<p>Follow @ajlohman on Twitter</p>
 		</footer>
+
+		<!-- {% if page.previous.url %} 
+                <a href="{{page.previous.url}}" title="Previous Post: 
+{{page.previous.title}}">&laquo; {{page.previous.title}}</a> 
+        {% endif %} 
+
+        {% if page.next.url %} 
+                <a href="{{page.next.url}}" title="next Post: 
+{{page.next.title}}">{{page.next.title}} &raquo; </a> 
+        {% endif %}  -->
+
+        
+        {% if page.previous.url %}
+            <a href="{{ page.previous.url }}">{{ page.previous.title }}</a>
+        {% endif %}
+
+        <!-- {% if page.next.url %}
+            <a href="{{ page.next.url }}">{{ page.next.title }}</a>
+        {% endif %} -->
+
 	</div>
 </main>
