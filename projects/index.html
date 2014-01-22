@@ -4,20 +4,28 @@ title: Projects
 category: projects
 ---
 
-<section class="site">
-	<div class="row">
-		<div class="small-12 medium-8 medium-centered columns">
-			  <h1>Projects</h1>
-			  <ul class="posts">
+<main class="main-content">
+	<div class="project-wrapper">
+		<!-- <h2>A selection of writings</h2> -->
+		<div class="list-items">
+			<section class="grid-section">
+				<!-- <h3>2014</h3> -->
+				<ul class="grid-list">
 				{% for post in paginator.posts %}
-					<li><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
-				 {{ post.date | time_ago }}
-				 {{ post.tags | tag_links }}
-				 {{ post.description }}
+				<li class="grid-listing">
+					<div class="wrapper">
+						<p><a href="{{ post.url }}" title="{{ post.title }}"><img src="{{ post.images[0] | format_teaser_image }}" /></a></p>
+						<p><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></p>
+					</div>
+				</li>
 				{% endfor %}
-			  </ul>
+				</ul>
 
-			  {{ paginator | pager_links }}
+				<footer>
+					<p>{{ paginator | pager_links }}</p>
+				</footer>
+
+			</section>
 		</div>
 	</div>
-</section>
+</main>

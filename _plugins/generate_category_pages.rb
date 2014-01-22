@@ -164,15 +164,15 @@ module Jekyll
 			if pager['previous_page']
 				
 				if pager['previous_page'] == 1
-					html << "<div class=\"previous\"><a href=\"/#{pager['category']}/\">&laquo; Newer posts</a></div>"
+					html << "<div class=\"previous\"><a href=\"/#{pager['category']}/\">&#8592; Newer</a></div>"
 				else
-					html << "<div class=\"previous\"><a href=\"/#{pager['category']}/page#{pager['previous_page']}\">&laquo; Newer posts</a></div>"
+					html << "<div class=\"previous\"><a href=\"/#{pager['category']}/page#{pager['previous_page']}\">&#8592; Newer</a></div>"
 				end
 	
 			end
 	
 			if pager['next_page'] 
-				html << "<div class=\"next\"><a href=\"/#{pager['category']}/page#{pager['next_page']}\">Older posts &raquo;</a></div>"
+				html << "<div class=\"next\"><a href=\"/#{pager['category']}/page#{pager['next_page']}\">Older &#8594;</a></div>"
 			end
 			
 			html << '</div>'

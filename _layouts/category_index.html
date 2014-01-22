@@ -2,62 +2,30 @@
 layout: default
 ---
 
+<main class="main-content">
+  <div class="wrapper">
+    <h2>A selection of writings</h2>
+    <div class="list-items">
+      <section class="list-section">
+        <!-- <h3>2014</h3> -->
+        <ul class="vertical-list">
+        {% for post in paginator.posts %}
+        <li>
+          <h3><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h3>
+          <!-- <p class="image"><a href="{{ post.url }}" title="{{ post.title }}"><img src="{{ post.images[0] | format_teaser_image }}" /></a></p> -->
+          <!-- <p>{{ post.date | time_ago }}</p> -->
+          <time>{{ post.date | date: '%B %d, %Y' }}</time>
+          <p>{{ post.description }} <a href="{{ post.url }}" title="{{ post.title }}">Read more</a></p>
+          <p><!-- {{ post.tags | tag_links }} --></p>
+        </li>
+        {% endfor %}
+        </ul>
 
+        <footer>
+          <p>{{ paginator | pager_links }}</p>
+        </footer>
 
-<div id="middle">
-
-  <div class="container">
-    
-    <div class="row">
-    
-      <div class="span8">
-        <div id="main">
-        
-          <div class="title">{{ page.title }}</div>
-
-          <div class="content">			
-
-					{% for post in paginator.posts %}
-
-{% if post.images %}
-  
-  <div class="teaser">
-    <div class="row">
-      <div class="span2">
-        <div class="image"><a href="{{ post.url }}" title="{{ post.title }}"><img src="{{ post.images[0] | format_teaser_image }}" /></a></div>
-      </div>
-      <div class="span6">
-        <div class="title"><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></div>
-        <div class="description">{% if post.description %}{{ post.description }}{% else %}{{ post.content }}{% endif %}</div>
-        <div class="read-more"><a href="{{ post.url }}" title="{{ post.title }}">There's more? Yes! Let's go. »</a></div>
-      </div>
+      </section>
     </div>
   </div>
-
-{% else %}
-
-  <div class="teaser">
-    <div class="row">
-      <div class="span8">
-        <div class="title"><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></div>
-        <div class="description">{% if post.description %}{{ post.description }}{% else %}{{ post.content }}{% endif %}</div>
-        <div class="read-more"><a href="{{ post.url }}" title="{{ post.title }}">There's more? Yes! Let's go. »</a></div>
-      </div>
-    </div>
-  </div>
-
-{% endif %}
-
-					{% endfor %}
-										
-					{{ paginator | pager_links }}
-					
-          </div>
-          					
-        </div>
-      </div>
-
-		</div>		
-	</div>
-</div>
-
+</main>
