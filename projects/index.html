@@ -14,7 +14,8 @@ category: projects
 				{% for post in paginator.posts %}
 				<li class="grid-listing">
 					<div class="wrapper">
-						<p><a href="{{ post.url }}" title="{{ post.title }}"><img src="{{ post.images[0] | format_teaser_image }}" /></a></p>
+						<!-- <p><a href="{{ post.url }}" title="{{ post.title }}"><img src="{{ post.images[0] | format_teaser_image }}" /></a></p> -->
+						<p><img src="/img/sample-project-thumb.jpg"></p>
 						<p><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></p>
 					</div>
 				</li>
