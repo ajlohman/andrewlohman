@@ -30,15 +30,15 @@ $primary-text-color:#333;
 
 
 // a
-$main-header-link:#f00;
+$main-header-link:#b99a54;
 $main-header-link-hover:#333;
-$primary-link:#f00;
+$primary-link:#b99a54;
 $primary-link-hover:#333;
 
 // background colors
-$primary-bg-color:#eee;
+$primary-bg-color:#222222;
 $secondary-bg-color:#333;
-$body-bg-color:#fff;
+$body-bg-color:#ffffff;
 
 
 // ======================================================
@@ -100,17 +100,18 @@ ul.vertical-list {
 ul.grid-list {
 	margin:4em 0;
 	padding:0;
-	background:blue;
+	// background:blue;
 	overflow:hidden;
 	li.grid-listing {
 		margin: 0;
 		list-style:none;
-		background:pink;
+		// background:pink;
 		width: 100%;
 		float:left;
 		.wrapper {
-			margin:0;
-			background:purple;
+			margin:0 0 1em 0;
+			padding:0;
+			// background:purple;
 			p {
 				text-align:center;
 				margin:0;
@@ -202,8 +203,11 @@ header.main-header {
 		li {
 			display:inline;
 			margin:0;
-			padding:0.5rem 0.4rem;
-			font-size: 1rem;
+			padding:0.5em 0.4em;
+			font-size: 0.65em;
+			@media only screen and (min-width: 40rem) {
+				font-size: 0.65em;
+			}
 		}
 	}
 	@media only screen and (min-width: 30rem) {
@@ -241,6 +245,12 @@ header.main-header {
 	color:#ffffff;
 	text-align:center;
 	display:block;
+}
+
+.description {
+	color:$secondary-color;
+	font-style:italic;
+	font-size: 0.65em;
 }
 
 
