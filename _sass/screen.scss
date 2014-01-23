@@ -25,19 +25,19 @@ $body-font-size: 24px;
 $body-line-height:1.6em;
 
 // color
-$primary-header-color:#333;
-$primary-text-color:#333;
+$primary-header-color:#222222;
+$primary-text-color:#222222;
 
 
 // a
-$main-header-link:#b99a54;
-$main-header-link-hover:#333;
+$main-header-link:#222222;
+$main-header-link-hover:#b99a54;
 $primary-link:#b99a54;
-$primary-link-hover:#333;
+$primary-link-hover:#222222;
 
 // background colors
-$primary-bg-color:#222222;
-$secondary-bg-color:#333;
+$primary-bg-color:#F7F7F7;
+$secondary-bg-color:#222222;
 $body-bg-color:#ffffff;
 
 
@@ -189,6 +189,22 @@ header.main-header {
 	padding:0 1rem;
 }
 
+.main-title {
+	// -webkit-transition: all 0.2s ease-out;
+	// -moz-transition: all 0.2s ease-out;
+	// -o-transition: all 0.2s ease-out;
+	// -ms-transition: all 0.2s ease-out;
+	// transition: all 0.2s ease-out;
+	position:relative;
+	margin:0 auto;
+	width:1em;
+	@media only screen and (min-width: 30rem) {
+		float:left;
+		padding:0;
+
+	}
+}
+
 .main-nav {
 	// -webkit-transition: all 0.2s ease-out;
 	// -moz-transition: all 0.2s ease-out;
@@ -198,7 +214,7 @@ header.main-header {
 	position:relative;
 	ul.main-nav-list {
 		text-align:center;
-		margin:0.6rem 0 0;
+		margin:0;
 		padding:0;
 		li {
 			display:inline;
@@ -256,20 +272,7 @@ header.main-header {
 
 
 
-.main-title {
-	// -webkit-transition: all 0.2s ease-out;
-	// -moz-transition: all 0.2s ease-out;
-	// -o-transition: all 0.2s ease-out;
-	// -ms-transition: all 0.2s ease-out;
-	// transition: all 0.2s ease-out;
-	position:relative;
-	margin:0;
-	@media only screen and (min-width: 30rem) {
-		float:left;
-		padding:0;
 
-	}
-}
 
 
 
