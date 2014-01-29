@@ -3,7 +3,7 @@ name: Andrew Lohman
 markdown: rdiscount
 rdiscount:
     extensions: [smart]
-# permalink: /articles/:title
+permalink: /:categories/:title.html
 paginate: 6
 baseurl: /andrewlohman
 

@@ -3,14 +3,24 @@ layout: default
 ---
 
 <main class="main-content">
-	<article class="writings">
-
+	<article class="projects">
 		{{ content }}
 
 		<div class="wrapper">
 			<footer class="content-footer">
-				<p>Want to share your thoughts? <a href="">@Reply to me on Twitter.</a></p>
-				<p><a href="/writings">Writing Archive &#8594;</a></p>
+				<p><a href="/writings">Project Archive &#8594;</a></p>
+
+{% if page.previous.url %} 
+                <a href="{{page.previous.url}}" title="Previous Post: 
+{{page.previous.title}}">&laquo; {{page.previous.title}}</a> 
+        {% endif %} 
+
+        {% if page.next.url %} 
+                <a href="{{page.next.url}}" title="next Post: 
+{{page.next.title}}">{{page.next.title}} &raquo; </a> 
+        {% endif %}
+				
+
 			</footer>
 		</div>
 	</article>

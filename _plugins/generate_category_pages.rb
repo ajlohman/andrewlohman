@@ -144,7 +144,8 @@ module Jekyll
       @name = 'index.html'
 
       self.process(@name)
-      self.read_yaml(File.join(base, '_layouts'), layout || 'category_index.html')
+      # self.read_yaml(File.join(base, '_layouts'), layout || 'category_index.html')
+      self.read_yaml(File.join(base, category), 'index.html')
 
       title_prefix             = site.config['cateogry_title_prefix'] || 'Everything in the '
       self.data['title']       = "#{title_prefix}#{category}"
@@ -164,15 +165,15 @@ module Jekyll
 			if pager['previous_page']
 				
 				if pager['previous_page'] == 1
-					html << "<div class=\"previous\"><a href=\"/#{pager['category']}/\">&#8592; Newer</a></div>"
+					html << "<div class=\"previous\"><a href=\"/#{pager['category']}/\">Previous &#8594;</a></div>"
 				else
-					html << "<div class=\"previous\"><a href=\"/#{pager['category']}/page#{pager['previous_page']}\">&#8592; Newer</a></div>"
+					html << "<div class=\"previous\"><a href=\"/#{pager['category']}/page#{pager['previous_page']}\">Previous &#8594;</a></div>"
 				end
 	
 			end
 	
 			if pager['next_page'] 
-				html << "<div class=\"next\"><a href=\"/#{pager['category']}/page#{pager['next_page']}\">Older &#8594;</a></div>"
+				html << "<div class=\"next\"><a href=\"/#{pager['category']}/page#{pager['next_page']}\">&#8592; Next</a></div>"
 			end
 			
 			html << '</div>'
