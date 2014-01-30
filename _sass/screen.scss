@@ -21,11 +21,11 @@ $serif-font:"freight-text-pro",sans-serif;
 $sans-serif-font:"proxima-nova",sans-serif;
 
 // size and line-height
-$body-font-size: 24px;
-$body-line-height:1.6em;
+$body-font-size: 1.5rem;
+$body-line-height:2.5rem;
 
-$body-font-size-small: 1em;
-$body-line-height-small:1.6em;
+$body-font-size-small: 1rem;
+$body-line-height-small:1.5rem;
 
 // color
 $primary-header-color:#222222;
@@ -38,26 +38,29 @@ $blue:#3ea795;
 $dark-green:#393f1c;
 $green:#6b913d;
 $gray:#444444;
+$dark-gray:#222222;
+$light-gray:#dddddd;
+$white:#ffffff;
 
 
 // a
-$main-header-link:$blue;
-$main-header-link-hover:$primary-text-color;
+$main-header-link:$primary-text-color;
+$main-header-link-hover:$blue;
 $primary-link:$orange;
 $primary-link-hover:$primary-text-color;
 
 // background colors
-$primary-bg-color:#f2ead4;
-$secondary-bg-color:#222222;
-$body-bg-color:#ffffff;
+$primary-bg-color:$white;
+$secondary-bg-color:$dark-gray;
+$body-bg-color:$white;
 
 // wrappers
-$wrapper: 25em;
-$wrapper-wide:45em;
+$wrapper: 40rem;
+$wrapper-wide:60rem;
 
 // media queries
-$medium:30em;
-$large:50em;
+$medium:40rem;
+$large:50rem;
 
 
 // ======================================================
@@ -72,7 +75,7 @@ body {
 	@media only screen and (min-width:$medium) {
 		font-size:$body-font-size;
 		line-height:$body-line-height;
-		}
+	}
 	a {
 		color:$primary-link;
 		text-decoration:none;
@@ -160,7 +163,45 @@ ul.grid-list {
 	}
 }
 
+// ======================================================
+// iconset
+// ======================================================
 
+@font-face {
+	font-family: 'ajl-iconset';
+	src:url('../fonts/ajl-iconset.eot');
+	src:url('../fonts/ajl-iconset.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/ajl-iconset.woff') format('woff'),
+		url('../fonts/ajl-iconset.ttf') format('truetype'),
+		url('../fonts/ajl-iconset.svg#ajl-iconset') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'ajl-iconset';
+	speak: none;
+	font-size: 1.5em;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-andrew-lohman:before {
+	content: "\e600";
+}
+
+.screen-reader-text {
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+}
 
 
 // ======================================================
@@ -182,8 +223,8 @@ h2 {
 }
 
 h3 {
-	font-size: 2em;
-	line-height: 1.1em;
+	font-size: 1.5em;
+	line-height: 1.3em;
 	margin:1em 0 0 0;
 	text-align:left;
 	font-weight:100;
@@ -193,9 +234,11 @@ h3 {
 // header and nav
 // ======================================================
 header.main-header {
-	background:$primary-bg-color;
+	background:$white;
+	// margin:0 1em;
 	padding:1rem 0;
 	overflow:hidden;
+	// border-bottom: 1px solid $light-gray;
 	a {
 		color:$main-header-link;
 		text-decoration:none;
@@ -209,10 +252,14 @@ header.main-header {
 		color:$main-header-link-hover;
 	}
 }
+
 .main-header .wrapper {
 	max-width:50em;
 	margin:0 auto;
 	padding:0 1em;
+	// @media only screen and (min-width: $medium) {
+	// 	padding:0 1em;
+	// }
 }
 
 .main-title {
@@ -231,6 +278,8 @@ header.main-header {
 	}
 }
 
+
+
 .main-nav {
 	// -webkit-transition: all 0.2s ease-out;
 	// -moz-transition: all 0.2s ease-out;
@@ -246,6 +295,7 @@ header.main-header {
 			display:inline;
 			margin:0;
 			padding:0.5em 0.4em;
+			font-family:$sans-serif-font;
 			font-size: 1em;
 			@media only screen and (min-width: $medium) {
 				font-size: 0.85em;
@@ -339,16 +389,27 @@ ul.grid-list-project-post {
 .project-hero-green {background:$green;}
 .project-hero-gray {background:$gray;}
 
+.project-hero-ac {background:#b1e0f8;}
+
 
 // ======================================================
 // Writings
 // ======================================================
 
 .writings-content-header {
-	background:$gray;
-	padding:4em 0 4em 0;
+	background:$white;
+	position:relative;
+	padding:0;
 	@media only screen and (min-width:$medium) {
-		padding:8em 0 8em 0;
+		padding:0;
+	}
+	.content-title {
+		position:absolute;
+		top: 30%;
+		width: 100%;
+		@media only screen and (min-width:$medium) {
+			top: 40%;
+		}
 	}
 }
 
@@ -361,23 +422,23 @@ ul.grid-list-project-post {
 		padding:0 1em 0 0;
 		margin: 0.5em 0 0 -3em;
 	}
-
 }
 
 // writings header section
-.writings-1 {
-	background:url(/img/writings-1-test.jpg) no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-	// IE
-	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale');
-	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')";
-}
+// .writings-1 {
+// 	background:url(/img/writings-1-test.jpg) no-repeat center center fixed;
+// 	-webkit-background-size: cover;
+// 	-moz-background-size: cover;
+// 	-o-background-size: cover;
+// 	background-size: cover;
+	
+// 	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale');
+// 	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')";
+// }
 
 .writings h2 {
 	color:#ffffff;
+	margin:0;
 }
 
 .writings-content-lead {
@@ -412,11 +473,11 @@ ul.grid-list-project-post {
 	overflow: hidden;
 	margin: 5rem 0;
 	.previous {
-		float:right;
+		float:left;
 		width:auto;
 	}
 	.next {
-		float:left;
+		float:right;
 		width:auto;
 	}
 }
@@ -425,7 +486,7 @@ ul.grid-list-project-post {
 
 
 footer.main-footer {
-	background:$primary-bg-color;
+	background:$white;
 	padding:4em 0;
 }
 
