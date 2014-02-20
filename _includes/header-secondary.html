@@ -19,21 +19,24 @@
     </head>
     <body>
 
-        <header class="main-header">
-          <div class="wrapper">
+        <header class="main-header-secondary">
+          <div class="wrapper-xl">
             <!-- <h1 class="main-title"><a href="{{ site.baseurl }}/"><img src="/img/andrew-lohman.svg" alt="Andrew Lohman"></a></h1> -->
-            <h1 class="main-title">
+            <!-- <h1 class="main-title">
                 <a href="{{ site.baseurl }}/">
                     <span class="icon-andrew-lohman" aria-hidden="true"></span>
                     <span class="screen-reader-text">Andrew Lohman</span>
                 </a>
-            </h1>
+            </h1> -->
+            <h1 class="main-title"><a href="{{ site.baseurl }}/">Andrew Lohman</a></h1>
+
+            {% assign current = page.url | downcase | split: '/' %}
             <nav class="main-nav">
               <ul class="main-nav-list">
-                <li><a href="{{ site.baseurl }}/projects">Projects</a></li>
-                <li><a href="{{ site.baseurl }}/writings">Writings</a></li>
-                <li class="disable">Findings</li>
-                <li class="disable">About</li>
+                <li><a href='{{ site.baseurl }}/projects' {% if current[1] == 'projects' %}class='current'{% endif %}>projects</a></li>
+                <li><a href='{{ site.baseurl }}/writings' {% if current[1] == 'writings' %}class='current'{% endif %}>writings</a></li>
+                <li><a href='{{ site.baseurl }}/findings' {% if current[1] == 'findings' %}class='current'{% endif %}>findings</a></li>
+                <li><a href='{{ site.baseurl }}/about' {% if current[1] == 'about' %}class='current'{% endif %}>about</a></li>
               </ul>
             </nav>
           </div>

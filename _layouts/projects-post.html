@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: default-secondary
 ---
 
 <main class="main-content">
@@ -8,7 +8,20 @@ layout: default
 
 		<div class="wrapper">
 			<footer class="content-footer">
-				<p><a href="/projects">Project Archive &#8594;</a></p>
+
+				<div class="wrapper-md" style="backgorund:pink;">
+					{% if page.next_in_category != nil %} 
+						<a href="{{page.next_in_category.url}}" class="next-link">Next</a>
+					{% endif %} 
+
+					<a href="/projects">Project Archive</a>
+
+					
+					{% if page.previous_in_category != nil %}
+						<a href="{{page.previous_in_category.url}}" class="previous-link">Previous</a>
+					{% endif %}
+				</div>
+
 
 <!-- {% if page.previous.url %} 
                 <a href="{{page.previous.url}}" title="Previous Post: 
@@ -25,7 +38,6 @@ layout: default
 		</div>
 	</article>
 </main>
-
 
 
 		<!-- <section> -->

@@ -1,30 +1,34 @@
 ---
-layout: default
+layout: default-secondary
 title: Projects
 category: projects
 ---
 
+<header class="projects-archive-header">
+</header>
+
 <main class="main-content">
-	<div class="project-wrapper">
-		<!-- <h2>A selection of writings</h2> -->
+	<div class="wrapper-md wrapper-full">
 		<div class="list-items">
 			<section class="grid-section">
-				<!-- <h3>2014</h3> -->
 				<ul class="grid-list">
 				{% for post in paginator.posts %}
 				<li class="grid-listing">
 					<div class="wrapper">
-						<p><a href="{{ post.url }}" title="{{ post.title }}"><img src="{{ post.teaser_image }}" />{{ post.title }}</a></p>
-						<p class="description">{{ post.description }}</p>
+						<a href="{{ post.url }}" title="{{ post.title }}">
+							<img src="{{ post.teaser_image }}" />
+							<div class="excerpt">
+								<h2>{{ post.title }}</h2>
+								<p class="description">{{ post.description }}</p>
+							</div>
+						</a>
 					</div>
 				</li>
 				{% endfor %}
 				</ul>
-
-				<footer>
+				<!-- <footer>
 					<p>{{ paginator | pager_links }}</p>
-				</footer>
-
+				</footer> -->
 			</section>
 		</div>
 	</div>

@@ -1,23 +1,35 @@
 ---
-layout: default
-title: Findings
+layout: default-secondary
+title: findings
 category: findings
 ---
 
-<section class="site">
-	<div class="row">
-		<div class="small-12 medium-8 medium-centered columns">
-			  <h1>Findings</h1>
-			  <ul class="posts">
-				{% for post in paginator.posts %}
-					<li><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
-				 {{ post.date | time_ago }}
-				 {{ post.tags | tag_links }}
-				 {{ post.description }}
-				{% endfor %}
-			  </ul>
+<header class="findings-archive-header">
+</header>
 
-			  {{ paginator | pager_links }}
+<main class="main-content">
+	<div class="wrapper-sm">
+		<div class="list-items">
+			<section class="list-section">
+				<ul class="vertical-list">
+				{% for post in paginator.posts %}
+				<li>
+					<h2><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
+					<time>{{ post.date | date: '%B %d, %Y' }}</time>
+
+					<p>
+					{{ post.content }} 
+					</p>
+					
+				</li>
+				{% endfor %}
+				</ul>
+
+				<footer>
+					<p>{{ paginator | pager_links }}</p>
+				</footer>
+
+			</section>
 		</div>
 	</div>
-</section>
+</main>

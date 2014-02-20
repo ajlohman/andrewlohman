@@ -4,7 +4,7 @@ markdown: rdiscount
 rdiscount:
     extensions: [smart]
 permalink: /:categories/:title.html
-paginate: 6
+paginate: 50
 baseurl: /andrewlohman
 
 
