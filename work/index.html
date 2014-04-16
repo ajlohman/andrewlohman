@@ -8,22 +8,13 @@ category: work
 </header> -->
 
 
-<main class="main-content">
-	<div class="wrapper-md">
-		<div class="content-title">
-			<h1>Some of my better work</h1>
-		</div>
-		<div class="content-lead">
-			<p class="sm">We strive to create memorable and extraordinary brand experiences, and work with entrepreneurs, non-for-profits, consumer goods companies, and businesses. By approaching each project with a unique perspective, we are able to address each of our clients needs and goals differently.</p>
-		</div>
-	</div>
-	<div class="wrapper-xl wrapper-full">
-		<div class="list-items">
-			<section class="grid-section">
-				<ul class="grid-list">
+<main>
+	<div class="wrapper">
+		
+			<ul class="grid-list">
 				{% for post in paginator.posts %}
 				<li class="grid-listing">
-					<div class="wrapper">
+					
 						<a href="{{ post.url }}" title="{{ post.title }}">
 							<img src="{{ post.teaser_image }}" />
 							<!-- <div class="excerpt">
@@ -31,14 +22,13 @@ category: work
 								<p class="description">{{ post.description }}</p>
 							</div> -->
 						</a>
-					</div>
+					
 				</li>
 				{% endfor %}
-				</ul>
+			</ul>
 				<!-- <footer>
 					<p>{{ paginator | pager_links }}</p>
 				</footer> -->
-			</section>
-		</div>
+			
 	</div>
 </main>

@@ -32,15 +32,17 @@ $large:60rem;
 // ======================================================
 // Global
 // ======================================================
-html, body {
+body {
 	background-color: #ffffff;
 	color: $color-primary;
+	font: 400 100%/1.65 "freight-text-pro",sans-serif;
+	text-rendering: optimizeLegibility;
 }
 
 a {
 	color: $color-primary;
 	text-decoration:none;
-	border-bottom: 1px dotted $color-primary;
+	// border-bottom: 1px dotted $color-primary;
 }
 
 img {
@@ -91,14 +93,22 @@ img {
 // wrapper
 // ======================================================
 
+.main-content {
+	position:relative;
+	z-index:2;
+	padding:0 5%;
+}
+
 // wrapper
-$wrapper: 1140px;
+$wrapper: 1322px;
 
 .wrapper {
-	background:#ffffff;
-	width:90%;
+	position:relative;
+	z-index:2;
+	background:pink;
+	width:100%;
 	max-width:$wrapper;
-	padding:0 5%;
+	padding:0;
 	margin:0 auto;
 	overflow:hidden;
 }
@@ -167,10 +177,7 @@ nav {
 }
 
 
-.main-content {
-	position:relative;
-	z-index:2;
-}
+
 
 
 // ======================================================
@@ -199,5 +206,29 @@ footer.main-footer {
 	background:whitesmoke;
 	padding:270px 0 320px 0;
 	text-align:center;
+}
+
+
+
+// ======================================================
+// grid listing
+// ======================================================
+
+
+ul.grid-list {
+	background:plum;
+	display:block;
+	overflow:hidden;
+	padding:0;
+	width:100%;
+	font-size: 0;
+	li.grid-listing {
+		display:block;
+		float:left;
+		width: 33.3333%;
+		padding:0;
+		font-size: 0;
+
+	}
 }
 
