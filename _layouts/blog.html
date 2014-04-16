@@ -1,43 +1,21 @@
 ---
-layout: default-secondary
+layout: default
 ---
 
 <main class="main-content">
-	<article class="projects">
+	<article class="blog">
+
 		{{ content }}
 
 		<div class="wrapper">
 			<footer class="content-footer">
-
-				<div class="wrapper-md" style="backgorund:pink;">
-					{% if page.next_in_category != nil %} 
-						<a href="{{page.next_in_category.url}}" class="next-link">Next</a>
-					{% endif %} 
-
-					<a href="/projects">Project Archive</a>
-
-					
-					{% if page.previous_in_category != nil %}
-						<a href="{{page.previous_in_category.url}}" class="previous-link">Previous</a>
-					{% endif %}
-				</div>
-
-
-<!-- {% if page.previous.url %} 
-                <a href="{{page.previous.url}}" title="Previous Post: 
-{{page.previous.title}}">&laquo; {{page.previous.title}}</a> 
-        {% endif %} 
-
-        {% if page.next.url %} 
-                <a href="{{page.next.url}}" title="next Post: 
-{{page.next.title}}">{{page.next.title}} &raquo; </a> 
-        {% endif %} -->
-				
-
+				<p>Want to share your thoughts? <a href="">@Reply to me on Twitter.</a></p>
+				<p><a href="/writings">Writing Archive &#8594;</a></p>
 			</footer>
 		</div>
 	</article>
 </main>
+
 
 
 		<!-- <section> -->

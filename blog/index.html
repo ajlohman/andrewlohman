@@ -1,0 +1,27 @@
+---
+layout: default
+title: Blog
+category: blog
+---
+
+<main class="main-content">
+	<div class="wrapper">
+		<article class="article">
+			
+			{% for post in paginator.posts %}
+				<header class="content-header">
+					<h2><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
+					<time>{{ post.date | date: '%B %d, %Y' }}</time>
+				</header>
+				<section class="content-body">
+					{{ post.content }}
+				</section>
+			{% endfor %}
+			
+			<footer>
+				<p>{{ paginator | pager_links }}</p>
+			</footer>
+
+		</article>
+	</div>
+</main>
