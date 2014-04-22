@@ -23,11 +23,15 @@ $serif-font:"freight-text-pro",sans-serif;
 $sans-serif-font:"proxima-nova",sans-serif;
 
 $color-primary:#333333;
+$color-secondary:#00a550;
 
 
 // media queries
 $medium:40rem;
 $large:60rem;
+
+// Colors
+$primary-link: #00a550;
 
 // ======================================================
 // Global
@@ -35,15 +39,19 @@ $large:60rem;
 body {
 	background-color: #ffffff;
 	color: $color-primary;
-	font: 400 100%/1.65 "freight-text-pro",sans-serif;
+	font: 100 120%/1.65 "freight-text-pro",sans-serif;
 	text-rendering: optimizeLegibility;
+	a {
+		color: $primary-link;
+		text-decoration:none;
+	}
+	a:hover {
+		color: $color-primary;
+		text-decoration:none;
+	}
 }
 
-a {
-	color: $color-primary;
-	text-decoration:none;
-	// border-bottom: 1px dotted $color-primary;
-}
+
 
 img {
 	width:100%;
@@ -52,6 +60,7 @@ img {
 
 
 .article {
+	padding:4rem 0;
 	.content-header {
 		width:100%;
 		max-width:600px;
@@ -62,31 +71,32 @@ img {
 		.content-lead {
 			width:100%;
 			max-width:600px;
-			background:yellow;
+			// background:yellow;
 			margin:0 auto;
+			text-align:center;
 		}
 		p {
 			width:100%;
 			max-width:600px;
-			background:plum;
+			// background:plum;
 			margin:0 auto;
+			padding:0 0 20px 0;
 		}
 		.pull {
 			width:100%;
 			max-width:900px;
-			background:#000000;
+			// background:#000000;
 			margin:0 auto;
 			padding:20px 0;
 		}
+		p.launch {
+			text-align:center;
+			border-bottom:1px solid #dddddd;
+			margin-bottom:60px;
+			padding-bottom:40px;
+		}
 	}
 }
-
-
-
-
-
-
-
 
 
 // ======================================================
@@ -95,6 +105,7 @@ img {
 
 .main-content {
 	position:relative;
+	background:#ffffff;
 	z-index:2;
 	padding:0 5%;
 }
@@ -105,7 +116,6 @@ $wrapper: 1322px;
 .wrapper {
 	position:relative;
 	z-index:2;
-	background:pink;
 	width:100%;
 	max-width:$wrapper;
 	padding:0;
@@ -118,13 +128,40 @@ $wrapper: 1322px;
 // ======================================================
 // Headers
 // ======================================================
-h1, h2 , h3{
+// h1, h2 , h3{
+// 	font-family:inherit;
+// 	font-weight:600;
+// }
+
+h1 {
 	font-family:$sans-serif-font;
+	text-transform: uppercase;
+	font-size:2.5rem;
+	line-height:2.5;
+	font-weight:600;
+	letter-spacing:8px;
+}
+
+h2 {
+	font-family:inherit;
+	text-align:center;
+	font-size:3rem;
+	line-height:1.2;
 	font-weight:600;
 }
 
-h1 {
-	text-transform: uppercase;
+h3 {
+	font-family:inherit;
+	font-size:2rem;
+	line-height:1.2;
+	font-weight:100;
+}
+
+time {
+	display:block;
+	color:#999999;
+	text-align:center;
+	font-style: italic;
 }
 
 // ======================================================
@@ -132,41 +169,53 @@ h1 {
 // ======================================================
 
 header.main-header {
-	background:whitesmoke;
+	background:#222222;
 	text-align:center;
-	margin:80px 0 0 0;
-	padding:100px 0;
+	font-family:$sans-serif-font;
+	margin:0;
+	padding:150px 0;
+		a {
+			color: $primary-link;
+			text-decoration:none;
+		}
+		a:hover, .current {
+			color: #ffffff;
+			text-decoration:none;
+			border-bottom: 2px solid #ffffff;
+			padding-bottom:6px;
+		}
 		.main-title-prefix {
 			z-index:1;
-			// background:blue;
 			position:fixed;
 			width:100px;
 			left: 50%;
 			margin-left: -50px;
-			margin-top:-155px;
+			margin-top:-120px;
 			.logo {
-				width:70px;
+				width:71px;
 			}
 		}
 		.main-title-suffix {
 			z-index:1;
-			// background:red;
+			color:#ffffff;
 			position:fixed;
-			width:300px;
+			width:600px;
 			left: 50%;
-			margin-left: -150px;
-			margin-top:-60px;
+			margin-left: -300px;
+			margin-top:-65px;
 		}
 }
 
 nav {
 	ul.main-nav-list {
+		font-family:$serif-font;
+		font-style: italic;
 		z-index:1;
 		// background:red;
 		position:fixed;
 		width:300px;
 		left: 50%;
-		margin:0 0 0 -150px;
+		margin:20px 0 0 -150px;
 		padding:0;
 		li {
 			display:inline;
@@ -203,8 +252,9 @@ nav {
 // footer
 // ======================================================
 footer.main-footer {
-	background:whitesmoke;
-	padding:270px 0 320px 0;
+	background:$color-secondary;
+	color:#ffffff;
+	padding:80px 0;
 	text-align:center;
 }
 

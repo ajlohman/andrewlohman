@@ -10,8 +10,8 @@ category: blog
 			
 			{% for post in paginator.posts %}
 				<header class="content-header">
-					<h2><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
 					<time>{{ post.date | date: '%B %d, %Y' }}</time>
+					<h2><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
 				</header>
 				<section class="content-body">
 					{{ post.content }}
